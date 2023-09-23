@@ -1,0 +1,72 @@
+@charset "UTF-8";
+
+:root {
+    --bg-yellow: #FFD684;
+    --bg-brown: #E69650;
+    --text-light: #ffffff;
+}
+
+.w-35 {
+    width: 35%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Courgette';
+}
+
+h1 {
+    font-size: 100px;
+}
+
+h2 {
+    font-size: 80px;
+}
+
+h3 {
+    font-size: 60px;
+}
+
+h4 {
+    font-size: 40px;
+}
+
+h5 {
+    font-size: 20px;
+}
+
+h6 {
+    font-size: 17px;
+}
+
+span {
+    font-family: 'Major Mono Display';
+}
+
+.major-font {
+    font-family: 'Major Mono Display';
+}
+
+.fs-58 {
+    font-size: 58px;
+}
+
+.fs-54 {
+    font-size: 54px;
+}
+
+.bg-yellow {
+    background: var(--bg-yellow);
+}
+
+.bg-brown {
+    background: var(--bg-brown);
+}
+
+.btn-yellow {
+    background-color: var(--bg-yellow);
+}
+
+.btn-brown {
+    background-color: var(--bg-brown);
+    color: var(--text-white);
+}
