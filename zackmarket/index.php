@@ -2,6 +2,7 @@
 
 session_start();
 include_once('../database.php');
+include_once('../settings.php');
 
 ?>
 
@@ -26,6 +27,36 @@ include_once('../database.php');
 </head>
 
 <body>
+    <div class="bg-yellow pt-2 pb-1 ">
+        <div class="container">
+            <ul class="d-flex justify-content-center align-items-center">
+                <li class="list-style-none mx-2">
+                    <i class="bi bi-map"></i> 
+                    Street 149, N 51
+                </li>
+                <li class="list-style-none mx-2">
+                    <i class="bi bi-telephone"></i> 
+                    (62) 98165-2770
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="container">
+        <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+            <a href="index.php" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+                <img src="../imgs/512-pizza-withoutback.png" alt="ZackMarket" width="60" height="60">
+                <h1 class="fs-44"><?= APP_SUBTILE ?></h1>
+            </a>
+
+            <ul class="nav nav-pills">
+                <li class="nav-item"><a href="#" class="nav-link" aria-current="page">Home</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Solid Food</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Liquids</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Savory and Sweet</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Cash Machine</a></li>
+            </ul>
+        </header>
+    </div>
 
 </body>
 

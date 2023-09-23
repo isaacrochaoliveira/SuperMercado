@@ -9,3 +9,5 @@ define('PASS', '');
 
 define('APP_TITLE', 'ZackMerket | Supermercado')/
 define('APP_SUBTILE', 'ZackMaket');
+
+define('URL', 'localhost/www/github/SuperMercado/zackmarket/');
