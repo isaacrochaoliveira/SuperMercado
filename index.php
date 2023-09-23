@@ -2,6 +2,8 @@
 
 include_once('settings.php');
 
+$pag = "index";
+
 ?>
 
 <!DOCTYPE html>
@@ -31,7 +33,7 @@ include_once('settings.php');
                 <span>Hello World!</span>
                 <h2 class="fs-54 major-font"><?= APP_SUBTILE ?></h2>
             </div>
-            <form action="#" method="post" class="mx-auto">
+            <form action="#" method="post" class="mx-auto" id="form">
                 <div class="row mb-3">
                     <div class="col">
                         <label for="email">E-mail ou Name</label>
@@ -44,14 +46,39 @@ include_once('settings.php');
                         <input type="text" name="pass" id="pass" class="form-control">
                     </div>
                 </div>
-                <div class="row">
+                <div class="row mb-3">
                     <div class="col-md-6">
-                        <button class="btn btn-brown">Logar-se <i class="fa-solid fa-right-to-bracket"></i></button>
+                        <button class="btn btn-brown" type="button" id="login">Sing-in <i class="fa-solid fa-right-to-bracket"></i></button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <span class="text-me"></span>
                     </div>
                 </div>
             </form>
         </div>
     </div>
 </body>
-
 </html>
+
+<script>
+    $(document).ready(function() {
+        $('#login').click(function() {
+            var pag = "<?= $pag ?>";
+            $.ajax({
+                url: pag + '/login.php',
+                method: 'post',
+                data: $("#form").serialize(),
+                success: function(msg) {
+                    if (msg.trim() == 'LOGIN') {
+                        alert(msg.trim());
+                    } else {
+                        $('.text-me').text(msg.trim());
+                    }
+                },
+                cache: false
+            }); 
+        });
+    });
+</script>

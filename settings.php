@@ -7,5 +7,5 @@ define('PORT', '3306');
 define('USER', 'root');
 define('PASS', '');
 
-define('APP_TITLE', 'ZackMerc | Supermercado')/
-define('APP_SUBTILE', 'ZackMarc');
+define('APP_TITLE', 'ZackMerket | Supermercado')/
+define('APP_SUBTILE', 'ZackMaket');
