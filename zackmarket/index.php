@@ -110,7 +110,7 @@ include_once('../settings.php');
 <script>
     $(document).ready(function() {
         var pag = "<?= $pag ?>";
-        $.ajax({
+        $.ajax({s
             url: pag + '/solidFoodTables.php',
             method: 'post',
             data: {},

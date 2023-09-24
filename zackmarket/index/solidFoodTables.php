@@ -35,7 +35,7 @@ if (count($res) > 0) {
                     <td><?= $price ?></td>
                     <td><?= $validate ?></td>
                     <td><?= $date ?></td>
-                    <td><?= $decreased_by ?>%</td>    
+                    <td><?= $decreased_by ?>%</td>  s  
                 </tr>
                 <?php
             }
