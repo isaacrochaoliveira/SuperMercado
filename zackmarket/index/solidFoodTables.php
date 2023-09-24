@@ -29,7 +29,12 @@ if (count($res) > 0) {
                 $date = $res[$i]['date'];
                 $decreased_by = $res[$i]['decreased_by'];
 
-                $priceF = number_format($price, 2, ',', '.');
+                if ($decreased_by > "0") {
+                    $price = $price - ($price * $decreased_by / 100);
+                    $priceF = number_format($price, 2, ',', '.');
+                } else {
+                    $priceF = number_format($price, 2, ',', '.');
+                }
                 ?>
                 <tr>
                     <td><?= $id ?></td>

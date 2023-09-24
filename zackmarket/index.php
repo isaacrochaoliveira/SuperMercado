@@ -104,12 +104,14 @@ include_once('../settings.php');
                 <div id="solid_foodTables">
 
                 </div>
+                <button class="btn btn-red"> See EveryThing <i class="bi bi-caret-right"></i></button>
             </div>
             <div class="d-block px-5">
                 <h4>Liquids</h4>
                 <div id="liquidsTables">
 
                 </div>
+                <button class="btn btn-red"> See EveryThing <i class="bi bi-caret-right"></i></button>
             </div>
         </div>
     </section>

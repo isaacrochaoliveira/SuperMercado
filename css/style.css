@@ -120,3 +120,13 @@ p {
 .border-bottom-dashed {
     border-bottom: 2px dashed #fff;
 }
+
+.btn-red {
+    background-color: var(--bg-red);
+    color: var(--text-light);
+}
+
+.btn-red:hover {
+    background-color: #c62f2ae5;
+    color: var(--text-light);
+}
