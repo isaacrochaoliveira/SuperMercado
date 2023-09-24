@@ -98,7 +98,7 @@ include_once('../settings.php');
         </div>
     </section>
     <section class="py-5">
-        <div class="d-flex">
+        <div class="d-flex flex-wrap">
             <div class="d-block px-5">
                 <h4>Solid Food</h4>
                 <div id="solid_foodTables">
@@ -109,6 +109,13 @@ include_once('../settings.php');
             <div class="d-block px-5">
                 <h4>Liquids</h4>
                 <div id="liquidsTables">
+
+                </div>
+                <button class="btn btn-red"> See EveryThing <i class="bi bi-caret-right"></i></button>
+            </div>
+            <div class="d-block px-5">
+                <h4>Savory and Sweet</h4>
+                <div id="savorySweetTables">
 
                 </div>
                 <button class="btn btn-red"> See EveryThing <i class="bi bi-caret-right"></i></button>
@@ -138,6 +145,21 @@ include_once('../settings.php');
         var pag = "<?= $pag ?>";
         $.ajax({
             url: pag + '/liquidsTables.php',
+            method: 'post',
+            data: {},
+            dataType: 'html',
+            success: function(msg) {
+                $('#liquidsTables').html(msg);
+            }
+        });
+    })
+</script>
+
+<script>
+    $(document).ready(function() {
+        var pag = "<?= $pag ?>";
+        $.ajax({
+            url: pag + '/savorySweetTables.php',
             method: 'post',
             data: {},
             dataType: 'html',

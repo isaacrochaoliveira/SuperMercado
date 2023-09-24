@@ -2,7 +2,7 @@
 
 include_once('../../database.php');
 
-$query = $pdo->query("SELECT * FROM liquids;");
+$query = $pdo->query("SELECT * FROM liquids LIMIT 3;");
 $res = $query->fetchAll(PDO::FETCH_ASSOC);
 if (count($res) > 0) {
     ?>
