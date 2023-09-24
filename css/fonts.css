@@ -7,3 +7,12 @@
     font-family: 'Major Mono Display';
     src: url('../fonts/major-mono-display/MajorMonoDisplay-Regular.ttf');
 }
+@font-face {
+    font-family: 'DM Serif Display';
+    src: url('../fonts/dm_serif_display/DMSerifDisplay-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'DM Serif Display Italic';
+    src: url('../fonts/dm_serif_display/DMSerifDisplay-Italic.ttf');
+}
