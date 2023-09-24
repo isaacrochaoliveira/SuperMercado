@@ -97,10 +97,19 @@ include_once('../settings.php');
             </div>
         </div>
     </section>
-    <section class="py-3">
+    <section class="py-5">
         <div class="d-flex">
-            <div class="px-5" id="solid_foodTables">
+            <div class="d-block px-5">
+                <h4>Solid Food</h4>
+                <div id="solid_foodTables">
 
+                </div>
+            </div>
+            <div class="d-block px-5">
+                <h4>Liquids</h4>
+                <div id="liquidsTables">
+
+                </div>
             </div>
         </div>
     </section>
@@ -110,13 +119,28 @@ include_once('../settings.php');
 <script>
     $(document).ready(function() {
         var pag = "<?= $pag ?>";
-        $.ajax({s
+        $.ajax({
             url: pag + '/solidFoodTables.php',
             method: 'post',
             data: {},
             dataType: 'html',
             success: function(msg) {
                 $('#solid_foodTables').html(msg);
+            }
+        });
+    })
+</script>
+
+<script>
+    $(document).ready(function() {
+        var pag = "<?= $pag ?>";
+        $.ajax({
+            url: pag + '/liquidsTables.php',
+            method: 'post',
+            data: {},
+            dataType: 'html',
+            success: function(msg) {
+                $('#liquidsTables').html(msg);
             }
         });
     })

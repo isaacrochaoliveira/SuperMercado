@@ -7,7 +7,7 @@ define('PORT', '3306');
 define('USER', 'root');
 define('PASS', '');
 
-define('APP_TITLE', 'ZackMerket | Supermercado')/
-define('APP_SUBTILE', 'ZackMaket');
+define('APP_TITLE', 'ZackMarket | Supermercado')/
+define('APP_SUBTILE', 'ZackMarket');
 
 define('URL', 'localhost/www/github/SuperMercado/zackmarket/');
