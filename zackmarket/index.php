@@ -1,5 +1,7 @@
 <?php
 
+$pag = "index";
+
 session_start();
 include_once('../database.php');
 include_once('../settings.php');
@@ -95,6 +97,27 @@ include_once('../settings.php');
             </div>
         </div>
     </section>
-</body>
+    <section class="py-3">
+        <div class="d-flex">
+            <div class="px-5" id="solid_foodTables">
 
+            </div>
+        </div>
+    </section>
+</body>
 </html>
+
+<script>
+    $(document).ready(function() {
+        var pag = "<?= $pag ?>";
+        $.ajax({
+            url: pag + '/solidFoodTables.php',
+            method: 'post',
+            data: {},
+            dataType: 'html',
+            success: function(msg) {
+                $('#solid_foodTables').html(msg);
+            }
+        });
+    })
+</script>
