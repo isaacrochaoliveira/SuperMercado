@@ -75,6 +75,10 @@ p {
     font-size: 36px;
 }
 
+.fs-34 {
+    font-size: 34px;
+}
+
 .bg-yellow {
     background: var(--bg-yellow);
 }

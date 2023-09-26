@@ -99,31 +99,54 @@ include_once('../settings.php');
     </section>
     <section class="py-5">
         <div class="d-flex flex-wrap">
-            <div class="d-block px-5">
-                <h4>Solid Food</h4>
+            <div class="d-block px-5 py-5">
+                <h4 class="fs-34">Solid Food</h4>
                 <div id="solid_foodTables">
 
                 </div>
                 <button class="btn btn-red"> See EveryThing <i class="bi bi-caret-right"></i></button>
             </div>
-            <div class="d-block px-5">
-                <h4>Liquids</h4>
+            <div class="d-block px-5 py-5">
+                <h4 class="fs-34">Liquids</h4>
                 <div id="liquidsTables">
 
                 </div>
                 <button class="btn btn-red"> See EveryThing <i class="bi bi-caret-right"></i></button>
             </div>
-            <div class="d-block px-5">
-                <h4>Savory and Sweet</h4>
+            <div class="d-block px-5 py-5">
+                <h4 class="fs-34">Savory and Sweet</h4>
                 <div id="savorySweetTables">
 
                 </div>
                 <button class="btn btn-red"> See EveryThing <i class="bi bi-caret-right"></i></button>
             </div>
         </div>
+        <div class="p-5">
+            <h2>Cash Machine</h2>
+            <hr>
+            <div id="my_bag">
+
+            </div>
+        </div>
     </section>
 </body>
 </html>
+
+<script>
+    $(document).ready(function() {
+        var pag = "<?= $pag ?>";
+        var id = <?= $_SESSION['id'] ?>;
+        $.ajax({
+            url: pag + '/my_bag.php',
+            method: 'post',
+            data: {id},
+            dataType: 'html',
+            success: function(res) {
+                $("#my_bag").html(res);
+            }
+        });
+    });
+</script>
 
 <script>
     $(document).ready(function() {
@@ -164,7 +187,7 @@ include_once('../settings.php');
             data: {},
             dataType: 'html',
             success: function(msg) {
-                $('#liquidsTables').html(msg);
+                $('#savorySweetTables').html(msg);
             }
         });
     })
