@@ -86,6 +86,7 @@ p {
 
 .btn-yellow:hover {
     background-color: var(--bg-red);
+    color: var(--text-light);
 }
 
 .bg-brown {
@@ -99,6 +100,10 @@ p {
 .btn-brown {
     background-color: var(--bg-brown);
     color: var(--text-white);
+}
+
+.btn-brown:hover {
+    background-color: var(--bg-yellow);
 }
 
 .list-style-none {

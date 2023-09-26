@@ -14,7 +14,7 @@ $pag = "solid_food";
     </div>
 </section>
 <section>
-    <div id="list" class="p-5">
+    <div id="list" class="d-flex flex-wrap p-5">
 
     </div>
 </section>

@@ -2,9 +2,11 @@
 
 include_once('../../database.php');
 
-$query = $pdo->query("SELECT * FROM solid_food LIMIT 3;");
+$query = $pdo->query("SELECT * FROM solid_food;");
 $res = $query->fetchAll(PDO::FETCH_ASSOC);
 if (count($res) > 0) {
+?>
+    <?php
     for ($i = 0; $i < count($res); $i++) {
         foreach ($res[$i] as $key => $value) {
         }
@@ -23,8 +25,8 @@ if (count($res) > 0) {
         } else {
             $priceF = number_format($price, 2, ',', '.');
         }
-?>
-        <div class="card" style="width: 18rem;">
+    ?>
+        <div class="card mx-2" style="width: 18rem;">
             <img src="imgs/<?= $photo ?>" class="card-img-top" alt="...">
             <div class="card-body">
                 <h4 class="card-title"><?= $name ?></h4>
@@ -35,11 +37,10 @@ if (count($res) > 0) {
                 <li class="list-group-item">Category: Solid Food</li>
             </ul>
             <div class="card-body">
-                <a href="#" class="card-link">Purchase</a>
-                <a href="#" class="card-link">Add on the Bag</a>
+                <a href="#" class="btn btn-yellow">Purchase</a>
+                <a href="#" class="btn">Add on the Bag</a>
             </div>
         </div>
 <?php
-
     }
 }
