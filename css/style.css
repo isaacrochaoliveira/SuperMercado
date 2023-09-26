@@ -55,6 +55,7 @@ p {
     font-family: 'Courgette';
 }
 
+
 .fs-58 {
     font-size: 58px;
 }
@@ -133,4 +134,13 @@ p {
 .btn-red:hover {
     background-color: #c62f2ae5;
     color: var(--text-light);
+}
+
+section#backgroundSolid {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../imgs/supermarket/solid_food/backgroundSolid.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    color: white;
+    padding: 210px 100px;
 }

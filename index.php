@@ -72,7 +72,7 @@ $pag = "index";
                 data: $("#form").serialize(),
                 success: function(msg) {
                     if (msg.trim() == 'LOGIN') {
-                        window.location = 'zackmarket';
+                        window.location = 'zackmarket/index.php?pag=home';
                     } else {
                         $('.text-me').text(msg.trim());
                     }

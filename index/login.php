@@ -21,7 +21,7 @@ $query->bindValue(':pass', $pass, PDO::PARAM_STR);
 $query->execute();
 $res = $query->fetchAll(PDO::FETCH_ASSOC);
 if (count($res) > 0) {
-    if (isset($_SESSION)) {
+    if (!(isset($_SESSION))) {
         session_start();
     }
     $_SESSION['id'] = $res[0]['id_users'];
