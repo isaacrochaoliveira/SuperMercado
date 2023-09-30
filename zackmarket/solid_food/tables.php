@@ -38,7 +38,7 @@ if (count($res) > 0) {
             </ul>
             <div class="card-body">
                 <a href="#" class="btn btn-yellow">Purchase</a>
-                <a href="#" class="btn">Add on the Bag</a>
+                <a href="#" class="btn" onclick="my_bag(<?= $id ?>)">Add on the Bag</a>
             </div>
         </div>
 <?php

@@ -32,4 +32,39 @@ $pag = "solid_food";
             }
         });
     });
+
+    function tables() {
+        $(document).ready(function() {
+            var pag = "<?= $pag ?>";
+            $.ajax({
+                url: pag + '/tables.php',
+                method: 'post',
+                data: {},
+                dataType: 'html',
+                success: function(res) {
+                    $("#list").html(res);
+                }
+            });
+        });
+    }
+</script>
+
+<script>
+    function my_bag(id) {
+        $(document).ready(function() {
+            var pag = "<?= $pag ?>";
+            $.ajax({
+                url: pag + 'my_bag.php',
+                method: 'post',
+                data: {id},
+                success: function(msg) {
+                    if (msg.trim() == "READY") {
+                        tables();
+                    } else {
+                        alert(msg.trim());
+                    }
+                }
+            });
+        });
+    }
 </script>
