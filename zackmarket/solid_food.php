@@ -75,14 +75,32 @@ $pag = "solid_food";
             alert("Product's Cod: " + id + '\nShopping suspended!');
         }
     }
+
     function purchase(id) {
-        $(document).ready(function()) {
+        $(document).ready(function() {
             var qtde = Number(window.prompt("How Many?"));
             if ((qtde != 0) || (qtde != "")) {
-                
+                var payment = window.prompt('Payment: ');
+                var pag = "<?= $pag ?>";
+                $.ajax({
+                    url: pag + '/purchase.php',
+                    method: 'post',
+                    data: {
+                        id,
+                        qtde,
+                        payment
+                    },
+                    success: function(msg) {
+                        if (msg.trim() == "PURCHASED") {
+                            tables();
+                        } else {
+                            alert(msg.trim());
+                        }
+                    }
+                });
             } else {
-                alert("Product's Cod: " + id + '"\nShopping Suspended!");
+                alert("Product's Cod: " + id + "\nShopping Suspended!");
             }
-        };
+        });
     }
 </script>
