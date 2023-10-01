@@ -92,7 +92,7 @@ $pag = "solid_food";
                     },
                     success: function(msg) {
                         if (msg.trim() == "PURCHASED") {
-                            tables();
+                            location.href = 'index.php?pag=cash_machine'
                         } else {
                             alert(msg.trim());
                         }

@@ -65,6 +65,8 @@ include_once('../settings.php');
             include_once('home.php');
         } else if ($_GET['pag'] == "solid_food") {
             include_once('solid_food.php');
+        } else if ($_GET['pag'] == "cash_machine") {
+            include_once('cash_machine.php');
         }
     ?>
     

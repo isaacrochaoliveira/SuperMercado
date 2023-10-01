@@ -26,6 +26,7 @@ if (count($res) > 0) {
     }
     $_SESSION['id'] = $res[0]['id_users'];
     $_SESSION['name'] = $res[0]['names'];
+    $_SESSION['emali'] = $res[0]['email'];
     echo "LOGIN";
 } else {
     echo "I'm really sorry! Your informations are wrong";
