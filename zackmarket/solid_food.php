@@ -51,20 +51,25 @@ $pag = "solid_food";
 
 <script>
     function my_bag(id) {
-        $(document).ready(function() {
-            var pag = "<?= $pag ?>";
-            $.ajax({
-                url: pag + 'my_bag.php',
-                method: 'post',
-                data: {id},
-                success: function(msg) {
-                    if (msg.trim() == "READY") {
-                        tables();
-                    } else {
-                        alert(msg.trim());
+        var qtde = Number(window.prompt("How Many?"));
+        if ((qtde > 0) || qtde != "") {
+            $(document).ready(function() {
+                var pag = "<?= $pag ?>";
+                $.ajax({
+                    url: pag + '/my_bag.php',
+                    method: 'post',
+                    data: {id, qtde},
+                    success: function(msg) {
+                        if (msg.trim() == "READY") {
+                            tables();
+                        } else {
+                            alert(msg.trim());
+                        }
                     }
-                }
+                });
             });
-        });
+        } else {
+            alert("Product's Cod: " + id + '\nShopping suspended!');
+        }
     }
 </script>
