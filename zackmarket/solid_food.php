@@ -58,7 +58,10 @@ $pag = "solid_food";
                 $.ajax({
                     url: pag + '/my_bag.php',
                     method: 'post',
-                    data: {id, qtde},
+                    data: {
+                        id,
+                        qtde
+                    },
                     success: function(msg) {
                         if (msg.trim() == "READY") {
                             tables();
@@ -71,5 +74,15 @@ $pag = "solid_food";
         } else {
             alert("Product's Cod: " + id + '\nShopping suspended!');
         }
+    }
+    function purchase(id) {
+        $(document).ready(function()) {
+            var qtde = Number(window.prompt("How Many?"));
+            if ((qtde != 0) || (qtde != "")) {
+                
+            } else {
+                alert("Product's Cod: " + id + '"\nShopping Suspended!");
+            }
+        };
     }
 </script>

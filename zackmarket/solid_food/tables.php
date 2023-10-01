@@ -37,8 +37,8 @@ if (count($res) > 0) {
                 <li class="list-group-item">Category: Solid Food</li>
             </ul>
             <div class="card-body">
-                <a href="#" class="btn btn-yellow">Purchase</a>
-                <a href="#" class="btn" onclick="my_bag(<?= $id ?>)">Add on my Bag</a>
+                <button href="#" class="btn btn-yellow" onclick="purchase(<?= $id ?>)">Purchase</button>
+                <button href="#" class="btn" onclick="my_bag(<?= $id ?>)">Add on my Bag</button>
             </div>
         </div>
 <?php
