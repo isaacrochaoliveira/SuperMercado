@@ -33,6 +33,7 @@ if (count($res) > 0) {
         <div class="w-50 py-5">
             <span class="fs-28"><?= "isaak.rocha137@gmail.com" ?></span>
             <h3 class="fs-36"><?= $_SESSION['name'] ?></h3>
+            <a href="index.php?pag=solid_food" class="btn btn-brown">Go Shopping More</a>
         </div>
         <div class="w-50 text-center">
             <img src="./imgs/<?= $photo ?>" alt="<?= $photo ?>" width="420">
